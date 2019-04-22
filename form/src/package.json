@@ -1,0 +1,14 @@
+{
+  "name": "formik-12-x-react",
+  "version": "1.0.0",
+  "description": "formik form fields",
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "formik": "1.2.0",
+    "react": "16.5.0",
+    "react-dom": "16.5.0",
+    "react-select": "1.0.0-rc.5",
+    "yup": "0.26.3"
+  }
+}
