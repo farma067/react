@@ -393,23 +393,7 @@ const MyEnhancedForm = formikEnhancer(MyForm);
 
 const App = () => (
   <div className="app">
-    {/* <h1>
-      Using <a href="https://github.com/jaredpalmer/formik">Formik</a> with 3rd-party
-      input components
-    </h1>
-    <p>
-      This example shows to use Formik with a 3rd-party input component. The trick is to
-      use Formik's <code>setFieldValue</code> prop and a custom component class whenever
-      you need a custom change handler.{' '}
-    </p>
-    <p>
-      To show this off, below is a Formik-enhanced form. It has a "vanilla" Formik input
-      for <code>email</code> and a custom select component for <code>topics</code> that
-      uses Jed Watson's{' '}
-      <a href="https://github.com/JedWatson/react-select">react-select</a> library.
-    </p> */}
     <MyEnhancedForm />
-    {/* <MoreResources /> */}
   </div>
 );
 
