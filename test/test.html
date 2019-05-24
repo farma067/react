@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+var Triangle = function(x, y, z) {
+  if (this instanceof Triangle) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  } else {
+    return new Triangle(x, y, z);
+  }
+}
+
+const checkError = (x, y, z) => {
+
+  if (x === 0 || y === 0 || z === 0) {
+    throw new Error(
+      "a triangle must have 3 sides with positive definate length");
+  } else if (x < 0 || y < 0 || z < 0) {
+    return true;
+  } else if (x + y <= z || x + z <= y || y + z <= x) {
+    return true;
+  }
+}
+
+const checkEquilateral = (x, y, z) => {
+  if (x === y && y === z) 
+    return true;
+}
+
+const checkIsosceles = (x, y, z) => {
+  if (x === y || y === z || x === z) 
+    return true;
+}
+
+Triangle.prototype.kind = function() {
+
+  if (checkError(this.x, this.y, this.z))
+    return "Not Valid";
+  
+  if (checkEquilateral(this.x, this.y, this.z))
+    return "equilateral";
+ 
+  if (checkIsosceles(this.x, this.y, this.z))  
+    return "isosceles";
+  
+  return "scalene";
+ 
+}
+
+MyTriangle = Triangle(4,4,7);
+console.log(MyTriangle.kind());
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
+</body>
+</html>
